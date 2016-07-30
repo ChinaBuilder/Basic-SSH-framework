@@ -13,10 +13,20 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class HomeController {
     /**
      * 主页get
+     *
      * @return
      */
     @RequestMapping(method = RequestMethod.GET)
     public String home() {
         return "/home";
+    }
+
+
+
+    @RequestMapping (value = "/insurance",method = RequestMethod.GET)
+    public String insuranceList() {
+
+
+        return "redirect:/insurance/list";
     }
 }

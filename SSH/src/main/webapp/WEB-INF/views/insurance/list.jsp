@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>医院日志主页</title>
+    <title>医保类型列表</title>
     <link rel="stylesheet" href="http://cdn.staticfile.org/twitter-bootstrap/2.3.2/css/bootstrap.min.css">
     <%--<link rel="stylesheet" href="/static/plugins/bootstrap-3.3.5-dist/css/bootstrap.min.css">--%>
     <link href="//cdn.bootcss.com/font-awesome/4.1.0/css/font-awesome.css" rel="stylesheet">
@@ -24,14 +24,14 @@
                     <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1"
                             data-toggle="dropdown"
                             aria-haspopup="true" aria-expanded="true">
-                                 系统设置
+                        系统设置
                         <span class="caret"></span>
                     </button>
 
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
                         <li><a href="#"><i class="fa fa-sitemap"></i>科室设置</a></li>
                         <li><a href="#"><i class="fa fa-medkit"></i>病种设置</a></li>
-                        <li><a href="/home/insurance"><i class="fa fa-bars"></i>医保类型设置</a></li>
+                        <li><a href="#"><i class="fa fa-bars"></i>医保类型设置</a></li>
                         <li><a href="#"><i class="fa fa-child"></i>患者状态设置</a></li>
                         <li class="divider"></li>
                         <li><a href=""><i class="fa fa-user-md"></i>账号设置</a></li>
@@ -45,6 +45,14 @@
             <li><a href="#"><i class="fa fa-cog"></i>个人设置</a></li>
         </ul>
     </div>
+</div>
+
+<div class="box">
+    <div class="box-header">
+        <span class="title">医保类型列表</span>
+    </div>
+    <div class="box-body"></div>
+
 </div>
 
 
