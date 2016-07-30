@@ -1,22 +1,31 @@
 package com.kaishengit.controller;
 
+import com.kaishengit.pojo.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-/**
- * Created by yangyangxu2016 on 2016/7/29.
- */
-
 @Controller
-@RequestMapping(value = "/home")
 public class HomeController {
     /**
-     * 主页get
+     * login页面
      * @return
      */
     @RequestMapping(method = RequestMethod.GET)
     public String home() {
-        return "/home";
+        return "/login";
+    }
+
+    /**
+     *登录验证
+     * @param user
+     * @return
+     */
+    @RequestMapping(method = RequestMethod.POST)
+    public String home(User user){
+
+
+
     }
 }
+
