@@ -1,15 +1,25 @@
 package com.kaishengit.pojo;
 
+import javax.inject.Named;
+import javax.persistence.*;
 import java.io.Serializable;
 
-/**
- * Created by yangyangxu2016 on 2016/7/29.
- */
+
+@Named
+@Entity
+@Table(name = "t_user")
 public class User implements Serializable{
 
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    private Integer roleid;
+
+    @ManyToOne
+    @JoinColumn(name="roleid")
+    private Role role;
+
+
     private  String name;
     private String account;
     private String password;
@@ -23,14 +33,6 @@ public class User implements Serializable{
 
     public void setId(Integer id) {
         this.id = id;
-    }
-
-    public Integer getRoleid() {
-        return roleid;
-    }
-
-    public void setRoleid(Integer roleid) {
-        this.roleid = roleid;
     }
 
     public String getName() {
@@ -73,38 +75,24 @@ public class User implements Serializable{
         this.enable = enable;
     }
 
+    public Role getRole() {
+        return role;
+    }
+
+    public void setRole(Role role) {
+        this.role = role;
+    }
+
     @Override
     public String toString() {
         return "User{" +
                 "id=" + id +
-                ", roleid=" + roleid +
+                ", role=" + role +
                 ", name='" + name + '\'' +
                 ", account='" + account + '\'' +
                 ", password='" + password + '\'' +
                 ", tel='" + tel + '\'' +
                 ", enable=" + enable +
                 '}';
-    }
-
-    public static class Role {
-
-        private Integer id;
-        private String name;
-
-        public Integer getId() {
-            return id;
-        }
-
-        public void setId(Integer id) {
-            this.id = id;
-        }
-
-        public String getName() {
-            return name;
-        }
-
-        public void setName(String name) {
-            this.name = name;
-        }
     }
 }

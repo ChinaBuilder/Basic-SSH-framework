@@ -1,2 +1,9 @@
+com\kaishengit\pojo\Role.class
+com\kaishengit\util\ShiroUtil.class
+com\kaishengit\Service\ShiroRealm.class
+com\kaishengit\controller\HomeController.class
+com\kaishengit\dao\BaseDao.class
+com\kaishengit\dao\UserDao.class
+com\kaishengit\Service\UserService.class
 com\kaishengit\pojo\User.class
-com\kaishengit\pojo\User$Role.class
+com\kaishengit\util\SessionFactory.class
